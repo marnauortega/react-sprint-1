@@ -22,6 +22,14 @@
    margin: 0 calc(margin / 2);
    ```
 
+   En aquest cas, tenint tres element, semblava més fàcil posar marge a l'element del mig:
+
+   Element:
+
+   ```css
+   margin: 0 margin;
+   ```
+
 4. És bona solució la de la graella d'articles?
 
    Container:
@@ -36,3 +44,7 @@
    ```css
    width: calc(50% - (gap / 2);
    ```
+
+5. Sobre els comentaris:
+   - Organitzen bé el codi? O cal organitzar més?
+   - Cal explicar alguna cosa d'aquest codi amb comentaris?
