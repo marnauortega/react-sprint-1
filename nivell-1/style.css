@@ -1,0 +1,101 @@
+:root {
+  --space: 1.5rem;
+}
+
+body {
+  max-width: 1200px;
+  margin: auto;
+}
+
+body > * {
+  margin: var(--space);
+}
+
+#hero,
+main,
+footer {
+  padding: var(--space);
+  background: black;
+}
+
+/* ---------- HERO ---------- */
+
+header {
+  background-color: #27394e;
+  padding: var(--space);
+  display: flex;
+}
+
+header > * {
+  background-color: #ea584b;
+  height: var(--space);
+}
+
+#logo,
+#social {
+  width: 25%;
+}
+
+nav {
+  width: 50%;
+  margin: 0 var(--space);
+}
+
+#hero-content-wrapper {
+  background-color: #f0763a;
+  padding: var(--space);
+  margin-top: var(--space);
+}
+
+#hero-content {
+  background-color: #ffcc5e;
+  height: var(--space);
+}
+
+/* ---------- MAIN ---------- */
+
+main {
+  display: flex;
+}
+
+#main-content {
+  background-color: #44465e;
+  padding: var(--space);
+  width: calc(100% * 2 / 3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space);
+}
+
+#main-content > * {
+  height: var(--space);
+  box-sizing: border-box;
+}
+
+article {
+  background-color: #1664a4;
+  width: calc(50% - (var(--space) / 2));
+}
+
+#main-content-footer {
+  background-color: #6399bb;
+  width: 100%;
+}
+
+#sidebar {
+  background-color: #f94c47;
+  width: calc(100% / 3);
+}
+
+.sidebar-content {
+  background-color: #ffe380;
+  height: var(--space);
+  margin: var(--space);
+}
+
+/* ---------- FOOTER ---------- */
+
+#footer-content {
+  background-color: #e4a434;
+  height: var(--space);
+}
