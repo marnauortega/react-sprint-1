@@ -47,8 +47,8 @@ body > * {
 header {
   padding: calc(4 * var(--space)) calc(5 * var(--space)) calc(4 * var(--space))
     calc(2 * var(--space));
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 60% 1fr;
   align-items: center;
 }
 
@@ -59,11 +59,12 @@ header {
 #logo img {
   height: auto;
   width: 75px;
+  animation: fadeIn 2s ease-in-out 0.5s both, moveUp 1s ease-in-out 0.5s both;
 }
 
 nav {
-  width: 60%;
   margin: 0 var(--space);
+  animation: fadeIn 2s ease-in-out both, moveUp 1s ease-out both;
 }
 
 ul {
@@ -71,13 +72,30 @@ ul {
   padding: 0;
   margin: 0;
   height: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   align-items: center;
-  justify-content: space-between;
+  justify-items: center;
 }
 
 i {
   padding-right: 0.25rem;
+}
+
+#social {
+  animation: fadeIn 2s ease-in-out 0.5s both, moveUp 1s ease-in-out 0.5s both;
+}
+
+#social ul {
+  justify-items: end;
+}
+
+#facebook-item {
+  grid-column: 4 / 5;
+}
+
+#twitter-item {
+  grid-column: 5 / 6;
 }
 
 nav a,
@@ -97,10 +115,6 @@ nav a:hover i {
 
 #social .twitter:hover {
   color: #299ded;
-}
-
-#social li:first-of-type {
-  padding-right: calc(2 * var(--space));
 }
 
 /* --- HERO CONTENT --- */
@@ -128,6 +142,7 @@ nav a:hover i {
   height: 100%;
   width: 100%;
   background-color: rgba(40, 40, 40, 0.1);
+  animation: fadeIn 2s ease-in-out;
 }
 
 h1 {
@@ -136,21 +151,45 @@ h1 {
   font-size: 2rem;
   opacity: 0.9;
   color: #fc6d3d;
+  display: inline-block;
+  animation: fadeIn 1.5s ease-in-out 1s both, moveUp 1s ease-out 1s both;
+}
+
+/* --- HERO ANIMATIONS --- */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* ---------- MAIN ---------- */
 
 main {
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
   gap: var(--space);
 }
 
 #main-content {
   background-color: #d8d7d7;
   padding: calc(var(--space));
-  width: calc(100% * 3 / 4);
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: calc(var(--space) * 2);
   box-sizing: border-box;
 }
@@ -163,10 +202,9 @@ main {
 
 article {
   background-color: white;
-  width: calc(50% - (var(--space)));
   padding: var(--space);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 255px 1fr 20px;
   gap: calc(2 * var(--space));
 }
 
@@ -222,13 +260,13 @@ article #main-content-footer {
   text-align: center;
   font-weight: 500;
   color: black;
+  grid-column: 1 / 3;
 }
 
 /* --- SIDEBAR --- */
 
 #sidebar {
   background-color: #d8d7d7;
-  width: calc(100% / 4);
   box-sizing: border-box;
   padding: var(--space);
   text-align: center;
@@ -280,7 +318,7 @@ footer {
 
   main {
     background-color: #f5f1f1;
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   #main-content,
@@ -298,7 +336,7 @@ footer {
   }
 
   header {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: calc(var(--space) * 2);
     padding: calc(4 * var(--space)) var(--space);
   }
@@ -312,15 +350,32 @@ footer {
   #logo img {
     display: block;
     margin: auto;
+    animation: fadeIn 2s ease-in-out both, moveUp 1s ease-in-out both;
   }
 
   nav {
     margin: 0;
+    animation: fadeIn 2s ease-in-out 0.5s both, moveUp 1s ease-out 0.5s both;
   }
 
   #social {
     width: auto;
     padding: 0;
+    animation: fadeIn 2s ease-in-out 1s both, moveUp 1s ease-in-out 1s both;
+  }
+
+  #social ul {
+    grid-template-columns: 1fr 1fr;
+    gap: calc(2 * var(--space));
+  }
+
+  #facebook-item {
+    grid-column: 1 / 2;
+  }
+
+  #twitter-item {
+    grid-column: 2 / 3;
+    justify-self: start;
   }
 
   #hero-content {
@@ -329,13 +384,15 @@ footer {
 
   h1 {
     font-size: 1.5rem;
+    animation: fadeIn 1.5s ease-in-out 1s both, moveUp 1s ease-out 1s both;
   }
 
   #main-content {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    column-gap: 0;
   }
 
   article {
-    width: 100%;
+    grid-column: 1 / 2;
   }
 }

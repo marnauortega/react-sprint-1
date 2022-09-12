@@ -48,3 +48,5 @@
 5. Sobre els comentaris:
    - Organitzen bé el codi? O cal organitzar més?
    - Cal explicar alguna cosa d'aquest codi amb comentaris?
+
+### GRID
