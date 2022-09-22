@@ -1,60 +1,18 @@
 # Maquetació I
 
-Projecte realitzat en HTML i CSS. A l'exercici Bonus he afegit JS i la biblioteca [Lenis](https://lenis.studiofreight.com/) per a l'smooth/momentum scrolling.
+![Maquetació I](/nivell-4-bonus/images/screenshot.png)
 
-## Estructura
+Redesign, layout and microinteractions in a simple blog site. Simply markup and CSS. I've sprinkled some JS and used[Lenis](https://lenis.studiofreight.com/) for smooth/momentum scrolling.
 
-Per a cada nivell hi ha una carpeta i per a cada exercici un commit. He afegit un nivell Bonus, en què he:
+## Structure
 
-- Redissenyat la pàgina respectant les diferents seccions.
-- Redissenyat la sidebar perquè tingui la funció de filtrar per dates i afegir interacció amb JS (Només està dissenyada, no arriba a funcionar).
-- Afegit Lenis per momentum scrolling.
+As the first assignment of IT Academy(https://www.barcelonactiva.cat/es/itacademy), this consists in building the HTML and CSS from a given mockup.
 
-## Dubtes
+There's a folder for each one of the levels and a commit for each exercise.
+I've added a Bonus folder where I've
 
-### HTML
+- Redesigned the site respecting its original sections.
 
-1. Header hauria de ser la caixa gran o la subcaixa que conté logo nav i social?
+- Redesigned the sidebar so that it acts as a filter by date (I've added some interactivity but not the filtering)
 
-### CSS
-
-3. Normalment com se solucionen els marges entre elements en què els dels extrems no han de tenir marges?
-
-   Container:
-
-   ```css
-   margin: 0 calc((margin / 2) * -1);
-   ```
-
-   Elements:
-
-   ```css
-   margin: 0 calc(margin / 2);
-   ```
-
-   En aquest cas, tenint tres element, semblava més fàcil posar marge a l'element del mig:
-
-   Element:
-
-   ```css
-   margin: 0 margin;
-   ```
-
-4. És bona solució la de la graella d'articles?
-
-   Container:
-
-   ```css
-   display: flex;
-   gap: gap;
-   ```
-
-   Elements:
-
-   ```css
-   width: calc(50% - (gap / 2);
-   ```
-
-5. Sobre els comentaris:
-   - Organitzen bé el codi? O cal organitzar més?
-   - Cal explicar alguna cosa d'aquest codi amb comentaris?
+- Added Lenis for momentum scrolling.
