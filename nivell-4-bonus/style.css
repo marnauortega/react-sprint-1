@@ -53,6 +53,7 @@ body {
   z-index: -1;
   object-fit: cover;
   object-position: 50% -110px;
+  clip-path: polygon(0 0, 100% 0, 100% 1020px, 0 1020px);
 }
 
 /* #hero::after {
