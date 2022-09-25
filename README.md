@@ -18,3 +18,13 @@ I've added a Bonus folder where I've
 - Redesigned the sidebar so that it acts as a filter by date (I've added some interactivity but not the filtering).
 
 - Added Lenis for momentum scrolling.
+
+## Available Scripts
+
+The only level that requires a build is the bonus. It simply provides
+
+```
+npm run build
+```
+
+This creates a build folder with vendor-prefixed styles ready for deployment.
