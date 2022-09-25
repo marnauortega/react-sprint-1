@@ -1,0 +1,18 @@
+{
+  "name": "nivell-4-bonus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css": "postcss src/style.css --use autoprefixer -o build/style.css",
+    "copy": "copyfiles -u 1 src/**/*.ttf src/**/*.woff2 src/**/*.woff src/**/*.png src/**/*.webp src/**/*.jpg src/**/*.ico src/**/*.js src/**/*.html build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "copyfiles": "^2.4.1",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0"
+  }
+}

@@ -47,7 +47,10 @@ body {
 
 #hero-bg {
   position: absolute;
-  inset: 0 0 auto 0;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 0;
   height: 1130px;
   width: 100%;
   z-index: -1;
@@ -236,8 +239,12 @@ article {
   width: calc(50% - (var(--padding) / 4));
   display: flex;
   flex-direction: column;
-  gap: 2.75rem;
+  /* gap: 2.75rem; */
   cursor: pointer;
+}
+
+article > * {
+  margin: 1.37rem 0;
 }
 
 .article-image {
