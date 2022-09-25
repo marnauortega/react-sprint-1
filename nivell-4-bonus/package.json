@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "css": "postcss src/style.css --use autoprefixer -o build/style.css",
-    "copy": "copyfiles -u 1 src/**/*.ttf src/**/*.woff2 src/**/*.woff src/**/*.png src/**/*.webp src/**/*.jpg src/**/*.ico src/**/*.js src/**/*.html build"
+    "copy": "copyfiles -u 1 src/**/*.ttf src/**/*.woff2 src/**/*.woff src/**/*.png src/**/*.webp src/**/*.jpg src/**/*.ico src/**/*.js src/**/*.html build",
+    "build": "npm run css & npm run copy"
   },
   "author": "",
   "license": "ISC",
