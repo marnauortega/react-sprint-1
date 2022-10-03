@@ -1,6 +1,6 @@
 # Maquetació I
 
-![Maquetació I](/nivell-4-bonus/images/screenshot.png)
+![Maquetació I](/nivell-4-bonus/screenshot.png)
 
 [Live Site](https://react-sprint-1.netlify.app/)
 
