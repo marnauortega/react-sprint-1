@@ -515,7 +515,7 @@ footer #social {
   }
 }
 
-/* --------------- TABLET START --------------- */
+/* --------------- BIG TABLET START --------------- */
 
 @media (max-width: 850px) {
   * {
@@ -658,6 +658,11 @@ footer #social {
 
   .marquee h2 {
     font-size: 100px;
+  }
+
+  .marquee span {
+    text-shadow: 1729px 0 currentColor, calc(1729px * 2) 0 currentColor, calc(1729px * 3) 0 currentColor,
+      calc(1729px * 4) 0 currentColor;
   }
 
   main {
